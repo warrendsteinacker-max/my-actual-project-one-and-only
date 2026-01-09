@@ -1,25 +1,31 @@
 import React from 'react'
-import {BrowserRouter, Route, Routes, Navigate} from "react-router-dom"
+import {BrowserRouter as Router, Route, Routes, Navigate} from "react-router-dom"
 import './App.css'
 
 const App = () => {
-
-  const isathent = false
+  const isAuthenticated = false
   const loading = false
 
-  if(loading){
-     return (<div>
-              <p>Loading...</p>
-            </div>);
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <p>Loading...</p>
+      </div>
+    );
   }
 
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
+        <Route
+          path="/"
+          element={isAuthenticated ? <Navigate to="/dashboard" replace /> : <Navigate to="/login" replace />}
+        />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
 
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
-    </BrowserRouter>
-  )
-}
-
-export default App
+    </Router>
+  );
+};
