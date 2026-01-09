@@ -2,6 +2,8 @@ import React from 'react'
 import {BrowserRouter as Router, Route, Routes, Navigate} from "react-router-dom"
 import LoginPage from './pages/Auth/LoginPage'
 import RegisterPage from './pages/Auth/RegisterPage'
+import ProtectedRoute from './comps/common/ProtectedRoute'
+
 import NotFoundPage from './pages/Auth/NotFoundPage'
 import DocumentListPage from './pages/Auth/DocumentListPage';
 import DocumentDetailPage from './pages/Auth/DocumentDetailPage';
