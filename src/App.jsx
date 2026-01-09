@@ -2,6 +2,8 @@ import React from 'react'
 import {BrowserRouter as Router, Route, Routes, Navigate} from "react-router-dom"
 import LoginPage from './pages/Auth/LoginPage'
 import RegisterPage from './pages/Auth/RegisterPage'
+import NotFoundPage from './pages/Auth/NotFoundPage'
+
 import './App.css'
 
 const App = () => {
@@ -31,3 +33,5 @@ const App = () => {
     </Router>
   );
 };
+
+export default App
