@@ -3,8 +3,22 @@ import {BrowserRouter, Route, Routes, Navigate} from "react-router-dom"
 import './App.css'
 
 const App = () => {
+
+  const isathent = false
+  const loading = false
+
+  if(loading){
+     return (<div>
+              <p>Loading...</p>
+            </div>);
+  }
+
   return (
-    <div style={{color: "green"}}>App</div>
+    <BrowserRouter>
+      <Routes>
+
+      </Routes>
+    </BrowserRouter>
   )
 }
 
