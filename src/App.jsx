@@ -5,7 +5,7 @@ import RegisterPage from './pages/Auth/RegisterPage'
 import ProtectedRoute from './comps/common/ProtectedRoute'
 
 import NotFoundPage from './pages/Auth/NotFoundPage'
-import DocumentListPage from './pages/Auth/DocumentListPage';
+// import DocumentListPage from './pages/Auth/DocumentListPage';
 import DocumentDetailPage from './pages/Auth/DocumentDetailPage';
 import FlashcardsListPage from './pages/Auth/FlashcardsListPage';
 import FlashcardPage from './pages/Auth/FlashcardPage';
@@ -40,7 +40,7 @@ const App = () => {
         {/* Protected Routes */}
         <Route element={<ProtectedRoute />}>
           <Route path="/dashboard" element={<DashboardPage />} />
-          <Route path="/documents" element={<DocumentListPage />} />
+          
           <Route path="/documents/:id" element={<DocumentDetailPage />} />
           <Route path="/flashcards" element={<FlashcardsListPage />} />
           <Route path="/documents/:id/flashcards" element={<FlashcardPage />} />
