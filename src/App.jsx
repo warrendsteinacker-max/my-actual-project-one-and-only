@@ -1,7 +1,7 @@
 import React from 'react'
 import {BrowserRouter as Router, Route, Routes, Navigate} from "react-router-dom"
-import LoginPage from './pages/Auth/LoginPage'
-import RegisterPage from './pages/Auth/RegisterPage'
+
+
 import ProtectedRoute from './comps/common/ProtectedRoute'
 
 // Auth Pages
@@ -17,11 +17,16 @@ import DocumentListPage from './pages/documents/DocumentListPage';
 // Dashboard Pages
 import DashboardPage from './pages/Dashboard/DashboardPage';
 
-// Other Pages (Verify these locations in your sidebar)
-import FlashcardsListPage from './pages/documents/FlashcardsListPage'; 
-import FlashcardPage from './pages/documents/FlashcardPage';
-import QuizTakePage from './pages/documents/QuizTakePage';
-import QuizResultPage from './pages/documents/QuizResultPage';
+// Flashcards
+import FlashcardListPage from './pages/Flashcards/FlashcardListPage'; // Match the folder name exactly
+import FlashcardPage from './pages/Flashcards/FlashcardPage';
+
+// Quizzes
+import QuizTakePage from './pages/Quizzes/QuizTakePage';
+import QuizResultPage from './pages/Quizzes/QuizResultPage';
+
+// Profile
+import ProfilePage from './pages/Profile/ProfilePage';
 
 import './App.css'
 
