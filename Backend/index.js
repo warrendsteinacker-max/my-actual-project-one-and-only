@@ -6,7 +6,7 @@ import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import connectDB from './config/db.js'; // Assuming your db file is here
-
+import errorHandler from '../middleware/errorHandler.js'
 // ES6 module __dirname alternative
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -33,6 +33,8 @@ app.use(express.urlencoded({ extended: true }));
 // Static folder for uploads
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
+//this is catch all error handler
+app.use(errorHandler);
 // Routes
 // (Add your route imports here, e.g., app.use('/api/auth', authRoutes))
 
