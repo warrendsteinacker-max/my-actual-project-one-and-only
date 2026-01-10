@@ -8,7 +8,7 @@ import ProtectedRoute from './comps/common/ProtectedRoute'
 import NotFoundPage from './pages/Auth/NotFoundPage';
 import LoginPage from './pages/Auth/LoginPage';
 import RegisterPage from './pages/Auth/RegisterPage';
-import ProfilePage from './pages/Auth/ProfilePage'; // Verify if this is in Auth or its own folder
+ // Verify if this is in Auth or its own folder
 
 // Document Pages
 import DocumentDetailPage from './pages/documents/DocumentDetailPage';
@@ -58,7 +58,7 @@ const App = () => {
           
           <Route path="/documents/:id" element={<DocumentDetailPage />} />
           <Route path="/documents" element={<DocumentListPage />} />
-          <Route path="/flashcards" element={<FlashcardsListPage />} />
+          <Route path="/flashcards" element={<FlashcardListPage />} />
           <Route path="/documents/:id/flashcards" element={<FlashcardPage />} />
           <Route path="/quizzes/:quizId" element={<QuizTakePage />} />
           <Route path="/quizzes/:quizId/results" element={<QuizResultPage />} />
